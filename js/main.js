@@ -4,38 +4,38 @@ $(function() {
 
     for (let idx in projects) {
         let project = document.createElement('div');
-        project.setAttribute("class", "py-lg-5 py-md-2");
+        project.setAttribute("class", "py-5 d-block");
 
         if (idx%2 == 0) {
-            project.innerHTML = '<img src="' + projects[idx].img_path + '" class="img-fluid float-lg-start">';
+            project.innerHTML = '<img src="' + projects[idx].img_path + '" class="img-fluid float-lg-start d-table">';
             project.innerHTML += `
-                                <div class="text-fluid align-items-center text-center text-lg-start">
+                                <div class="text-fluid align-items-center text-center text-lg-start d-table">
                                     <h5 class="post-title pt-4 pt-lg-0">${projects[idx].title}</h5>
                                     <p class="post-subtitle">${projects[idx].desc}</p>
                                     <p class="text-muted">${projects[idx].tag.join(', ')}</p>
-                                    <a type="button" class="btn btn-primary mt-xl-5 mt-md-2 mt-5 btn-lg" href="${projects[idx].github_url}" target="_blank">
+                                    <a type="button" class="btn btn-primary mt-xl-5 mt-md-2 mt-3 btn-lg" href="${projects[idx].github_url}" target="_blank">
                                         <i class="fab fa-github pe-2"></i>Github
                                     </a>
-                                </div>
+                                </div><br>
             `;
         } else {
-            project.innerHTML = '<img src="' + projects[idx].img_path + '" class="img-fluid float-lg-end mx-auto d-block w-md-50">';
+            project.innerHTML = '<img src="' + projects[idx].img_path + '" class="img-fluid float-lg-end mx-auto d-table">';
             project.innerHTML += `
-                                <div class="text-fluid align-items-center text-center text-lg-end">
+                                <div class="text-fluid align-items-center text-center text-lg-end d-table">
                                     <h5 class="post-title pt-4 pt-lg-0">${projects[idx].title}</h5>
                                     <p class="post-subtitle">${projects[idx].desc}</p>
                                     <p class="text-muted">${projects[idx].tag.join(', ')}</p>
                                     <a type="button" class="btn btn-primary mt-xl-5 mt-md-2 mt-5 btn-lg" href="${projects[idx].github_url}" target="_blank">
                                         <i class="fab fa-github pe-2"></i>Github
                                     </a>
-                                </div>
+                                </div><br>
             `;
         };
 
         projectList.appendChild(project);
     };
 
-    
+
     // Menampilkan link footer
     let footerLink = document.querySelector("#footer");
 
