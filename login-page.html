@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Login</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="./vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom fonts for this template -->
+        <link href="./vendor/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <form action="" class="col-4 offset-4 pt-5">
+            <div class="mb-3">
+                <label for="username" class="col-sm-2 col-form-label">Username</label>
+                <input type="text" class="form-control" name="username" id="username">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="col-sm-2 col-form-label">Username</label>
+                <input type="password" class="form-control" name="password" id="password">
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+        <script src="./vendor/jquery/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+                    let username = $("#username").val();
+                    let password = $("#password").val();
+                    
+                    if (username == "maya" && password == "maya") {
+                        alert("Berhasil");
+                    } else {
+                        alert("Coba lagi");
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
